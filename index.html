@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Chabab el-khair - Association pour la jeunesse">
+  <title>Chabab el-khair - Association</title>
+  <link rel="icon" type="image/png" href="headlogo.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+      <h1 class="logo">
+          <img src="logo.jpg" alt="Chabab el-khair Logo">
+          Chabab el-khair
+      </h1>
+      <nav class="nav-links">
+          <a href="#"><i class="fas fa-home"></i> Accueil</a>
+          <a href="#activities"><i class="fas fa-list"></i> Activités</a>
+          <a href="#about"><i class="fas fa-info-circle"></i> À propos</a>
+          <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          <a href="#register"><i class="fas fa-user-plus"></i> Inscription</a>
+      </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-text">
+        <h2>Bienvenue à notre association</h2>
+        <p>Rejoignez-nous et participez à nos activités pour la jeunesse.</p>
+        <div class="hero-buttons">
+            <button onclick="document.getElementById('register').scrollIntoView();">S'inscrire</button>
+            <button class="secondary" onclick="document.getElementById('activities').scrollIntoView();">Nos activités</button>
+        </div>
+    </div>
+
+    <div class="blue-box">
+        <img src="Photo1.png" alt="Association Image">
+    </div>
+  </section>
+
+  <!-- ACTIVITIES SECTION -->
+  <section class="activities" id="activities">
+      <h2 class="section-title">Nos activités</h2>
+      <p>Nous organisons des événements culturels, sportifs et éducatifs pour la jeunesse.</p>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section class="about" id="about">
+      <div class="about-content">
+          <h2 class="section-title">À propos de nous</h2>
+          <p>شباب بومية هي جمعية تهدف إلى دعم الشباب وتوفير بيئة للنشاط والتعلم والتواصل الاجتماعي.</p>
+      </div>
+  </section>
+
+  <!-- REGISTER SECTION -->
+  <section class="register" id="register">
+      <h2 class="section-title">Inscription à l'association</h2>
+      <form id="register-form" action="register.php" method="post" enctype="multipart/form-data">
+
+          <div class="form-group">
+              <label for="photo">Photo personnelle (*) :</label>
+              <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png" required>
+          </div>
+
+          <div class="form-group">
+              <label for="fullname">Nom complet :</label>
+              <input type="text" id="fullname" name="fullname" required>
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+              <label for="phone">Téléphone :</label>
+              <input type="text" id="phone" name="phone">
+          </div>
+
+          <div class="form-group">
+              <label for="age">Âge :</label>
+              <input type="number" id="age" name="age" min="12" max="99" required>
+          </div>
+
+          <div class="form-group">
+              <label for="idcard">Carte nationale (*) :</label>
+              <input type="file" id="idcard" name="idcard" accept=".pdf,.doc,.docx,.jpg,.png" required>
+          </div>
+
+          <div class="form-group">
+              <label for="commitment">Fichier de l'engagement approuvé (*) :</label>
+              <input type="file" id="commitment" name="commitment" accept=".pdf,.doc,.docx,.jpg,.png" required>
+          </div>
+
+          <input type="submit" value="S'inscrire">
+      </form>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="contact" id="contact">
+      <h2 class="section-title">Contactez-nous</h2>
+      <form id="contact-form" action="send_messages.php" method="post">
+
+          <div class="form-group">
+              <label for="name">Nom :</label>
+              <input type="text" id="name" name="name" required>
+          </div>
+
+          <div class="form-group">
+              <label for="email">Email :</label>
+              <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+              <label for="message">Message :</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <input type="submit" value="Envoyer">
+      </form>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+      <div class="footer-container">
+          <div class="nav-column">
+              <h3>Navigation</h3>
+              <ul>
+                  <li><a href="#">Accueil</a></li>
+                  <li><a href="#activities">Activités</a></li>
+                  <li><a href="#about">À propos</a></li>
+                  <li><a href="#register">Inscription</a></li>
+                  <li><a href="#contact">Contact</a></li>
+              </ul>
+          </div>
+
+          <div class="contact-column">
+              <h3>Contact</h3>
+              <p><i class="fas fa-map-marker-alt"></i> Boumia , Midelt , Morocco </p>
+              <p><i class="fas fa-phone"></i> 0615-755310</p>
+              <p><i class="fas fa-envelope"></i> chababboumia2020@gmail.com</p>
+          </div>
+
+          <div class="social-column">
+              <h3>Réseaux sociaux</h3>
+              <div class="social-icons">
+                  <a href="https://www.facebook.com/profile.php?id=100064044548027"><i class="fab fa-facebook"></i></a>
+                  <a href="https://www.instagram.com/association_chabab_elkhayer"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+
+      <div class="footer-bottom">
+          &copy; 2025 Chabab el-khair - Tous droits réservés.
+      </div>
+  </footer>
+
+</body>
+</html>

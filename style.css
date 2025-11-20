@@ -1,0 +1,229 @@
+/* ===============================
+   BODY / BACKGROUND
+   =============================== */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #1e3c72 0%, #2a5298 100%);
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* ===============================
+   NAVBAR / HEADER
+   =============================== */
+.navbar {
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+}
+
+/* روابط الهيدر والفوتر باللون السماوي */
+.nav-links a,
+footer a {
+  color: #87CEEB; /* لون سماوي */
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+footer a:hover {
+  color: #ffffff;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+button {
+  background-color: #ffffff;
+  color: #1e3c72;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button.secondary {
+  background-color: transparent;
+  color: #87CEEB; /* سماوي */
+  border: 2px solid #87CEEB;
+}
+
+button.secondary:hover {
+  background-color: #87CEEB;
+  color: #1e3c72;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ===============================
+   HERO SECTION
+   =============================== */
+.hero {
+  padding: 120px 20px 50px;
+  text-align: center;
+  position: relative;
+}
+
+/* الصندوق الأزرق */
+.blue-box {
+  width: 350px;
+  max-width: 90%;
+  aspect-ratio: 1/1;
+  background: #1e3c72;
+  border-radius: 12px;
+  margin: 40px auto 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: box-shadow 0.3s ease;
+}
+
+.blue-box:hover {
+  box-shadow: 0 0 30px rgba(0,0,0,0.6);
+}
+
+.blue-box img {
+  width: 95%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===============================
+   TITLES
+   =============================== */
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #87CEEB; /* عناوين ثانوية سماوية */
+}
+
+/* ===============================
+   FORM / INPUTS
+   =============================== */
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #ffffff;
+  color: #1e3c72;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+form {
+  background-color: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   SECTIONS
+   =============================== */
+section {
+  padding: 50px 20px;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background-color: rgba(0,0,0,0.3);
+  backdrop-filter: blur(5px);
+  color: #ffffff;
+  padding: 20px;
+}
+
+footer .footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.social-icons a {
+  color: #87CEEB;
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: #ffffff;
+}
+
+/* ===============================
+   RESPONSIVE / MOBILE
+   =============================== */
+@media (max-width: 768px) {
+  footer .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  footer .nav-column,
+  footer .contact-column,
+  footer .social-column {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .blue-box {
+    width: 85%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .blue-box img {
+    width: 100%;
+  }
+}
